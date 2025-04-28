@@ -1,0 +1,15 @@
+#include <p18f4550.h>
+
+
+void main(void)
+{
+	int a,b,result = 0;
+	TRISB = 0;
+	a = 0x02;
+	b = 0x03;
+	result = a + b;
+	PORTB = result;
+
+	while(1);
+
+}

@@ -1,0 +1,27 @@
+#include <p18f4550.h>
+
+
+void main(void)
+{
+	unsigned int a, b,remainder , result;
+	int i;
+	
+	a = 10;
+	b = 2;
+	result = 0;
+	remainder = a;
+	
+	for (i = 0; i<a;i++)
+	{
+		if (remainder >= b)
+		{
+			remainder = remainder - b;
+			result++;
+		}
+	}
+	
+	TRISB = 0;
+	PORTB = result;
+
+while(1);
+}
